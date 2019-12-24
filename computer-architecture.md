@@ -6,10 +6,10 @@ Computer architecture describes the functionality, organization, and implementat
 
 The von Neumann architecture was first published by John von Neumann in 1945 and has since been the dominant architecture to be used, with some modern extensions.
 
-<figure>
+<p align="center">
     <img src="./images/Von-Neumann-Architecture-Diagram.jpg" alt="von Neumann Architecture Diagram">
-    <figcaption>Image from computerscience.gcse.guru</figcaption>
-</figure>
+    <p align="center">Image from computerscience.gcse.guru</p>
+</p>
 
 As a high level overview, this architecture consists of one processor and one memory bank, connected by a bus. The Central Professing Unit (CPU) can execute instructions that are fetched from memory by a control unit. The memory also stores data. The arithmetic logic unit (ALU) then performs the needed computations. 
 
