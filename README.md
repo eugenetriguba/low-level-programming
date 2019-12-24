@@ -1,3 +1,5 @@
 # Low Level Programming
 
-Notes, answers to exercises, and code from Low Level Programming by Igor Zhirkov. This repository is organized by topics rather than by chapter. Furthermore, there is also likely to be more in here than just what is covered in the book such as information from outside resources or extra programs.
+This repository contains notes and answers to questions from Low Level Programming by Igor Zhirkov. It is organized by topics rather than by chapters.
+
+However, there are other outside sources brought in to expand sections in the notes and programs written that simply peak my curiosity.
