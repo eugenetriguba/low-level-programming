@@ -18,6 +18,16 @@ There are a few key features of this architecture:
   - The memory stores the encoded instructions and the data to operation on. There is no means to distinguish data from code: both are bit strings.
   - Memory is organized into cells, which are labeled with their respective indices in a natural way (e.g. cell #43 follows cell #42). The indices start at 0. Cell size may vary (John von Neumann thought that each bit should have its own address); modern computers take one byte (eight bits) as a memory cell size.
   - The program consists of instructions that are fetched one after another. Their execution is sequential unless a special jump instruction is executed.
+  
+### Modern Extensions of the von Neumann Architecture
+
+| Problem  | Solution |
+| ------------- | ------------- |
+| Nothing is possible without querying slow memory | Registers, caches |
+| Lack of interactivity  | Interrupts |
+| No support for code isolation in procedures, or for context saving | Hardware Stack |
+| Multitasking: any program can execute any instruction | Protection Rings |
+| Multitasking: programs are not isolated from one another | Visual Memory |
 
 ## References
 
