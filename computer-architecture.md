@@ -29,6 +29,17 @@ There are a few key features of this architecture:
 | Multitasking: any program can execute any instruction | Protection Rings |
 | Multitasking: programs are not isolated from one another | Visual Memory |
 
+### Registers
+
+Registers are a processor's own memory cells. They are a modern extension of the [von Neumann Architecture](./computer-architecture.md#von-neumann-architecture) which allow the CPU to augment how slow fetching from memory is. However, there are usually not very many of them, as least compared to main or secondary memory. Programmers work with general purpose registers most of the time since they are interchangable and can be used in many different commands.
+
+Naturally you may ask then, why not add more registers then? However, there are several reasons engineers prefer other ways of speeding up computations:
+  - Registers are far more expensive.
+  - Instructions encode the register's number as part of their codes. So to address more registers, the instructions have to grow in size.
+  - Registers add complexity to the circuits to address them. More complex circuits are harder to speed up. It is not easy to set up a large register file to work on 5 GHz.
+  
+In the worst case, the use of registers could slow down computers since everything has to be fetched into registers before the computations are made and flushed into memory after.
+
 ## References
 
 [1] I. Zhirkov, Low-level programming, 1st ed. Saint Petersburg: Apress, 2017.
