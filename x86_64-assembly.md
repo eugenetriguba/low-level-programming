@@ -4,7 +4,14 @@ Assembly language for a chosen processor is a programming language consisting of
 
 ## Registers
 
-Registers are a processors own memory cells.
+Registers are a processor's own memory cells. They are a modern extension of the [von Neumann Architecture](./computer-architecture.md#von-neumann-architecture) which allow the CPU to augment how slow fetching from memory is. However, there are usually not very many of them, as least compared to main or secondary memory.
+
+Naturally you may ask then, why not add more registers then? However, there are several reasons engineers prefer other ways of speeding up computations:
+  - Registers are far more expensive.
+  - Instructions encode the register's number as part of their codes. So to address more registers, the instructions have to grow in size.
+  - Registers add complexity to the circuits to address them. More complex circuits are harder to speed up. It is not easy to set up a large register file to work on 5 GHz.
+  
+In the worst case, the use of registers could slow down computers since everything has to be fetched into registers before the computations are made and flushed into memory after.
 
 ### General Purpose Registers
 
