@@ -2,6 +2,30 @@
 
 Assembly language for a chosen processor is a programming language consisting of mnemonics for each possible binary encoded instruction (machine code).
 
+## Registers
+
+When using the names r0, ...,r15 of the registers, you can address a part of the register using certain suffixes:
+  - d for double word - lower 32 bits
+  - w for word - lower 16 bits
+  - b for byte - lower 8 bits
+
+e.g. r7b for lowest byte of register r7.
+
+### 64-bit General Purpose Registers
+
+| Name | Alias | Description |
+| ------------- | ------------- | ------------- |
+| r0 | rax | A kind of "accumulator," used in arithmetic instructions. |
+| r1 | rcx | Used for cycles (e.g., in a loop) |
+| r2 | rdx | Stores data during input/output operations |
+| r3 | rbx | Base register. It was used for base addressing in early processor models |
+| r4 | rsp | Stores the address of the topmost element in the hardware stack. |
+| r5 | rbp | Stack frame's base. |
+| r6 | rsi | Source index in string manipulation commands (such as movsd) |
+| r7 | rdi | Destination index in string manipulation commands (such as movsd) |
+
+There are the main 8. There is also r8 - r15.
+
 ### EFLAGS Register
 
 CF (bit 0) Carry Flag: Set if an arithmetic operation generates a carry or a borrow out of the most significant bit of the result; cleared otherwise. Indicates an overflow condition for unsigned-integer arithmetic, also used for multiple-precision arithmetic.
