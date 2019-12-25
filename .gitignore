@@ -1,2 +1,6 @@
 .git/
 *.o
+
+# Ignore executables
+hello
+print_rax
