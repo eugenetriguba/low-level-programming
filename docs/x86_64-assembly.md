@@ -4,7 +4,7 @@ Assembly language for a chosen processor is a programming language consisting of
 
 ## Registers
 
-When using the names r0, ...,r15 of the registers, you can address a part of the register using certain suffixes:
+When using the names r0,...,r15 of the registers, you can address a part of the register using certain suffixes:
   - d for double word - lower 32 bits
   - w for word - lower 16 bits
   - b for byte - lower 8 bits
@@ -24,7 +24,7 @@ e.g. r7b for lowest byte of register r7.
 | r6 | rsi | Source index in string manipulation commands (such as movsd) |
 | r7 | rdi | Destination index in string manipulation commands (such as movsd) |
 
-There are the main 8. There is also r8 - r15.
+These are the main 8. There is also r8 through r15.
 
 ### EFLAGS Register
 
