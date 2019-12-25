@@ -7,7 +7,7 @@ Computer architecture describes the functionality, organization, and implementat
 The von Neumann architecture was first published by John von Neumann in 1945 and has since been the dominant architecture to be used, with some modern extensions.
 
 <p align="center">
-    <img src="./docs/images/Von-Neumann-Architecture-Diagram.jpg" alt="von Neumann Architecture Diagram">
+    <img src="./images/Von-Neumann-Architecture-Diagram.jpg" alt="von Neumann Architecture Diagram">
     <p align="center">Image from computerscience.gcse.guru</p>
 </p>
 
