@@ -3,7 +3,7 @@
 ; Prints out 'Hello, world!' to stdout.
 
 section .data
-message: db 'Hello, world!', 10
+message: db 'Hello, world!', 10  ; our message, followed by a newline.
 
 section .text
 global _start
