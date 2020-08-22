@@ -6,9 +6,9 @@ BIN_DIR = ./bin
 
 SRC_FILES = $(SRC_DIR)/*.asm
 
-build:
-	@mkdir $(BUILD_DIR)
-	@mkdir $(BIN_DIR)
+build: $(SRC_FILES)
+	@mkdir -p $(BUILD_DIR)
+	@mkdir -p $(BIN_DIR)
 
 	@for file in $(SRC_FILES); do \
 		nasm -f elf64 $(SRC_DIR)/$$(basename $$file) -o $(BUILD_DIR)/$$(basename $$file .asm).o; \
