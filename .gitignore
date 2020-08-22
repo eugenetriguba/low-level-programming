@@ -1,6 +1,7 @@
-.git/
-*.o
+# Build
+build/
+bin/
 
-# Ignore executables
-hello
-print_rax
+# Editors
+.vscode/
+.idea/
