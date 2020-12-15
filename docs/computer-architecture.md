@@ -11,7 +11,7 @@ The von Neumann architecture was first published by John von Neumann in 1945 and
     <p align="center">Image from computerscience.gcse.guru</p>
 </p>
 
-As a high level overview, this architecture consists of one processor and one memory bank, connected by a bus. The Central Professing Unit (CPU) can execute instructions that are fetched from memory by a control unit. The memory also stores data. The arithmetic logic unit (ALU) then performs the needed computations. 
+As a high level overview, this architecture consists of one processor and one memory bank, connected by a bus. The Central Processing Unit (CPU) can execute instructions that are fetched from memory by a control unit. The memory also stores data. The arithmetic logic unit (ALU) then performs the needed computations. 
 
 There are a few key features of this architecture:
   - Memory stores only bits (a unit of information, equal to 0 or 1)
@@ -42,7 +42,8 @@ In the worst case, the use of registers could slow down computers since everythi
 
 ### Interrupts
 
-Interrupts allow program execution order to change based on events external to the program itself. After a external or internal signal is caught, a program's execution is suspended, some registers are saved, and the CPU starts to execute a special routine to handle the situation.
+Interrupts are a controlled violation to the sequential execution of a program.
+They allow program execution order to change based on events external to the program itself. After a external or internal signal is caught, a program's execution is suspended, some registers are saved, and the CPU starts to execute a special routine to handle the situation.
 
 Situations where an interrupt may occur:
   - A signal from an external device.
@@ -54,7 +55,8 @@ Situations where an interrupt may occur:
 
 In general, a stack is a data structure with two operations: you can add a new element on the top of the stack (push) or you can remove an element from the top of the stack (pop).
 
-In hardware, there is support for this data structure. While this doesn't mean there is also a separate stack memory, there is a sort of emulation implemented with those two machine instructions (push and pop) and a register (rsp). The rsp register (the stack pointer) holds the address of the topmost element of the stack.
+In hardware, there is support for this data structure. While this doesn't mean there is also a separate stack memory, there is a sort of emulation implemented with those two machine instructions (push and pop) and a register (rsp). The rsp register (the stack pointer) holds the absolute address of the topmost (last) element of the stack. There are many
+instructions that modify this register implicity, such as: push, pop, call, ret, int.
 
 The hardware stack is most useful for implementing function calls in higher-level languages. When function A calls function B, the stack is used to save the context of computations to return to it after B terminates.
 

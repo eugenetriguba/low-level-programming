@@ -30,7 +30,7 @@ These are the main 8. There is also r8 through r15.
 
 CF (bit 0) Carry Flag: Set if an arithmetic operation generates a carry or a borrow out of the most significant bit of the result; cleared otherwise. Indicates an overflow condition for unsigned-integer arithmetic, also used for multiple-precision arithmetic.
 
-AF (bit 4) Auxiliary Carry Flag: Set if an arithmetic operation generates a carry or a borrow out of bit 3 of the result; cleared otherwise. This flag is used in binary-coded decimal (BCD) arithmetic.
+AF (bit 4) Auxiliary Carry Flag: Set if an arithmetic operation generates a carry or a borrow out of bit 3 of the result; cleared otherwise. This flag is used in binary-coded decimal (BCD) arithmetic. This flag is rarely used.
 
 ZF (bit 6) Zero Flag: Set if the result is zero; cleared otherwise.
 
@@ -38,7 +38,9 @@ SF (bit 7) Sign Flag: Set equal to the most-significant bit of the result, which
 
 OF (bit 11) Overflow Flag: Set if the integer result is too large a positive number or too small a negative number (excluding the sign-bit) to fit in the destination operand; cleared otherwise. This flag indicates an overflow condition for signed-integer (two's complement) arithmetic.
 
-OF vs CF: OF is an overflow flag for integers whereas CF indicates an overflow from an arithmetic operation.
+CF vs OF: CF is the result of an unsigned overflow wheras OF is the result of a signed overflow. So CF will hold the 64th bit when there are not enough bits in the register to hold the value for an unsigned number (0..63 bits, CF is 64). However, OF holds
+the sign bit when there is a signed overflow for a register. Because the value was too
+big for the register, the most significant bit overwrote the sign bit so OF now holds it.
 
 ## References
 

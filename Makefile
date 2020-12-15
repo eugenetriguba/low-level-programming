@@ -4,7 +4,9 @@ SRC_DIR = ./src
 BUILD_DIR = ./build
 BIN_DIR = ./bin
 
-SRC_FILES = $(SRC_DIR)/*.asm
+SRC_FILES = $(SRC_DIR)/hello.asm $(SRC_DIR)/multiply.asm $(SRC_DIR)/print_rax.asm
+
+all: build
 
 build: $(SRC_FILES)
 	@mkdir -p $(BUILD_DIR)
